@@ -5,9 +5,13 @@ import { Image, TextInput, View } from "react-native";
 const SearchBar = ({
   onPress,
   placeholder,
+  onChangeText,
+  value,
 }: {
   onPress?: () => void;
-  placeholder: string;
+  placeholder?: string;
+  onChangeText?: (text: string) => void;
+  value?: string;
 }) => {
   return (
     <View className="flex-row items-center bg-dark-200 rounded-full px-5 py-4">
@@ -19,9 +23,9 @@ const SearchBar = ({
       />
       <TextInput
         onPress={onPress}
-        placeholder={placeholder || "Search"}
-        value=""
-        onChangeText={() => {}}
+        placeholder={placeholder || "Search..."}
+        value={value}
+        onChangeText={onChangeText}
         placeholderTextColor="#a8b5db"
         className="flex-1 ml-2 text-white"
       />
