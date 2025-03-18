@@ -2,9 +2,8 @@ import TabIcon from "@/components/TabIcon";
 import { icons } from "@/constants/icons";
 import { Tabs } from "expo-router";
 import React from "react";
-import { StyleSheet } from "react-native";
 
-const _layout = () => {
+export default function _layout() {
   return (
     <Tabs
       screenOptions={{
@@ -70,8 +69,4 @@ const _layout = () => {
       />
     </Tabs>
   );
-};
-
-export default _layout;
-
-const styles = StyleSheet.create({});
+}
